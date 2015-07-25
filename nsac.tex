@@ -1,0 +1,78 @@
+%%%% Document options
+\documentclass[a4paper, 11pt]{article}
+\usepackage[a4paper]{geometry}
+%\usepackage[utf8x]{inputenc}
+\usepackage{epsfig,rotating}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{eurosym}
+\usepackage{tabularx}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage[version=3]{mhchem}
+\usepackage{booktabs}
+
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+%\usepackage[parfill]{parskip}    
+
+\begin{document}
+\input{Commands.tex}
+
+% =============================
+\title{\Huge{\sf Report to the NSCS committee}\\ \vspace{.5cm}
+\LARGE{The NEXT collaboration} 
+\vspace{.5cm}}
+
+
+\date{ } % Activate to display a given date or no date
+\maketitle
+\thispagestyle{empty}
+\clearpage
+
+\setcounter{page}{1}
+%\tableofcontents
+
+% =============================
+\section{Introduction}
+\input{src/Introduction}
+
+This document is organised as follows. 
+In section \ref{sec.next} we summarise the principle of operation and status of the NEXT experiment. In section \ref{sec.bm} we present the NEXT background model and the expected sensitivity to the effective Majorana mass, \mbb.  In section \ref{sec.new}, we explain the R\&D program of the NEW apparatus, currently being commissioned at the Canfranc Underground Laboratory (LSC) in Spain. In section \ref{sec.ts}, we comment the prospects of the technology for the ton scale. In section \ref{sec.nc} we discuss the structure of the NEXT collaboration and the proposed sharing of responsibilities and costs with the USA contingent.  Finally, in section \ref{sec.conclu} we conclude.
+
+\section{The NEXT experiment}
+\label{sec.next}
+\input{src/NEXT}
+
+\section{NEXT background model and expected sensitivity to \mbb} 
+\label{sec.bm}
+
+\input{src/SignalAndBackground}
+\input{src/SelectionCuts}
+\input{src/BackgroundRate}
+\input{src/SensitivityNext100}
+
+\section{\label{sec.new}The NEW detector}
+\input{src/NEW}
+
+\section{Towards a ton-scale high-pressure xenon TPC.}
+\label{sec.ts}
+\input{src/TonScale}
+
+\section{The NEXT collaboration}
+\label{sec.nc}
+ \input{src/NextCollaboration}
+
+ \section{Conclusions}
+ \label{sec.conclu}
+ In this report we have presented a comprehensive status of the NEXT experiment and its  scientific goals (including R\&D) for the period 2015-2018. Demonstration with the NEW and NEXT-100 detector of the expected performance in energy resolution and background rejection would qualify the technology for a ton-scale detector capable of exploring the IH in a reasonable time (5 year) with a reasonable target mass (2 tons). Furthermore, the collaboration will be pursuing active R\&D to find suitable gas mixtures capable to reduce the diffusion to some 2 mm over 1 m drift length, without jeopardising other capabilities of the detector such as electron lifetime or energy resolution. Promising candidates (Xe + 0.1\% \COT, Xe + 0.5\% \CHF) are currently being investigated. The reduction of diffusion would increase the background rejection of the technique and would open the possibility of further improvement of the topological signature adding a magnetic field. 
+ 
+ 
+ \nocite{*}
+\bibliographystyle{elsarticle-num}
+\bibliography{biblio}
+\end{document}
