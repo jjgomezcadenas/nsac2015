@@ -126,4 +126,44 @@ The addition of a magnetic field could reduce the background in a ton-scale HPXe
 
 From the point of view of NEXT R\&D, a test using the NEXT-DEMO detector and the TPC90 magnet, available at CERN (which can run up to 0.7 Tesla) has been approved by the laboratory management. An experimental area has been identified and CERN has agreed to provide the magnet (including water cooling and power) and the infrastructure support. Our schedule foresees to transport NEXT-DEMO and its gas system to CERN in late 2016 and take data in 2017, using several radioactive sources and operating at intensities of 0.1-0.7 Tesla, for about six months.
 
+\subsection{Instrumental upgrades}
+
+There is a number of possible upgrades that could be carried out in a ton-scale HPXe detector with respect to NEXT-100. 
+
+A particularly attractive possibility would be to make the apparatus a symmetric TPC, with the cathode in the center of the field cage and two anodes (+EL grids) in the end-cups. This would permit doubling the detector length with the same electron drift. Indeed, a cylindrical fiducial volume, 2.5 m long and with a diameter of 2.5 m (thus preserving the 1:1 aspect ratio of NEXT-100) would contain a mass of 1060 kg. The fiducial volume would be divided by the cathode in two halves of 1.25 m long (thus slightly more drift than in NEXT-100). Ionisation electrons would drift to one of the two anodes depending on the half of the TPC the event was produced. The EL amplification would be the same design than NEXT-100, doubling the dimensions. The system would consist of a transparent grid, acting as gate and a quartz plate coated with TPB and ITO. The two planes being the anode plates would be identical and would consist of SiPMs of 6 mm and 1 mm located at a pitch of 1 cm. Thus, one would place one SiPM of 1 mm$^2$~followed by 1 SiPM of 6 mm$^2$. The center of the next 1 mm SiPM would be at 1 cm from the previous 1 mm SiPM and the center of the next 6 mm SiPM would be at 1 cm from the previous 6 mm SiPM. This staggered configuration, effectively merges the energy plane and the tracking plane of NEXT-100 in the same multi-function plane. Light is isotropically produced in the EL grid. The light going forward is shift to blue in the anode plate and hits the near-by plane. The small (1 mm) SiPM record the signals used for tracking exactly as in NEXT-100. The signal from the large (6 mm) SiPM is not read, since many of them will be saturated with the intense light, and, in any case, one does not want to measure energy in a plane too near to the light production, to avoid difficult geometrical corrections. Instead, the light going backwards hits either the light tube covering the field cage (and is transferred to blue and part of it reflected towards the far plane) of the anode plate of the far plane, where is shifted to blue and read by the large (6 mm) SiPM. 
+
+The possibility of replacing PMTs by large area SiPMs appears increasingly feasible as the devices have reduced the main source of noise (dark current) by more than one order of magnitude in about 3 years. Currently, the dark current at room temperature is about 70 kHz/mm$^2$, and decreases a factor 2 every time that the temperature decreases 10 degrees. Cooling the tracking planes to $\sim$ -10 degrees C appears reasonable and would decrease the dark current to less than 10 kHz/mm$^2$. Our Monte Carlo simulations indicate that a performance comparable with that of PMTs can be obtained for dark currents below
+50 kHz/mm$^2$.  
+
+A symmetric TPC readout exclusively by SiPMs would represent a considerable improvement with respect to NEXT-100, both in terms of the increase in size (while keeping the same drift length), the radio purity and the simplicity of the design. The use of SiPMs would eliminate the need for PMTs which are one of the driving sources of background in NEXT-100 (instead, the SiPMs currently used by NEXT-100 are measured to be extremely radiopure) and also the need for the complex vacuum-enclosure system. Last but not least, such a SiPM-only apparatus could operate in a magnetic field. 
+
 \subsection{A ton scale HPXe experiment: cost estimate}
+
+\begin{table}[htdp!]
+\caption{Cost estimate for a ton-scale HPXe-EL TPC}
+\begin{center}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Item	& unit cost & number of units &	Total cost	(M\$)\\
+\hline
+\XE\ & 15 \$/g & $10^6$ & 15 \\
+SiPM tracking & 7 & $10^5$ & 0.7 \\
+SiPM energy & 15 & $10^5$ & 1.5 \\
+FEE + DAQ & 15 & $2 \times 10^5$ & 3 \\
+Gas system & 0.8 & 1 & 0.8 \\
+Water tank & 1.0 & 1 & 1.0 \\
+Mechanics & 1.0 & 1 & 1.0 \\
+Shielding & 1.0 & 1 & 1.0 \\
+\hline
+Total & & & 24 \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+\label{tab.costs}
+\end{table}%
+
+
+The cost of a future ton-scale HPXe-EL detector would be dominated by the cost of the \XE. The cost of the enriched xenon for NEXT-100 was about 10 \$ per gram but we quote here a conservative estimate of 15 \$ per gram, resulting in about 15 M\$ for one ton. The next elements driving the cost are the SiPMs. One needs 10$^5$~1 mm SiPMs and 10$^5$~6 mm
+SiPMs (50,000 per plane). A conservative estimate (at today's prices and correcting for the larger order) is 7 \$ per unit for the 1 mm parts and 15 \$ per unit for the 6 mm parts. The cost of the front-end electronics and DAQ in NEXT-100 was 15\$ per channel. The same electronics can be used for the ton scale. The cost of the gas system for NEXT-100 is about 0.4 M\$, thus 0.8 M\$ appears reasonable for the larger system. Adding 1M\$ for the water tank, 2M\$ for mechanics (including pressure vessel, field cage anode plates, etc), and 1 M\$ for ultra pure copper shielding (internal to the vessel) adds to 24 M\$. The costs are summarised in Table \ref{tab.costs}. 
+
